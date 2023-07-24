@@ -19,4 +19,20 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         super.init()
         manager.delegate = self
     }
+    func requestLocation() {
+        isLoading = true
+        manager.requestLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        location = locations.first?.coordinate
+        isLoading = false
+    }
+    
+    //função para lidar com erros
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error getting location", error)
+        isLoading = false
+    }
 }
