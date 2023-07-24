@@ -23,9 +23,11 @@ struct WelcomeView: View {
             .padding()
             
             LocationButton(.shareCurrentLocation) {
-                
+                locationManager.requestLocation()
             }
-            
+            .cornerRadius(30)
+            .symbolVariant(.fill)
+            .foregroundColor(.white)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

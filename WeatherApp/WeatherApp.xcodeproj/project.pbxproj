@@ -13,6 +13,7 @@
 		DE0BED0A2A5E15C400E8C592 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE0BED092A5E15C400E8C592 /* Preview Assets.xcassets */; };
 		DE0BED122A5E1C1A00E8C592 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0BED112A5E1C1A00E8C592 /* LocationManager.swift */; };
 		DE54D1842A6ECF5B00A783B1 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54D1832A6ECF5B00A783B1 /* WelcomeView.swift */; };
+		DE54D1862A6ED8ED00A783B1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54D1852A6ED8ED00A783B1 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		DE0BED092A5E15C400E8C592 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DE0BED112A5E1C1A00E8C592 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		DE54D1832A6ECF5B00A783B1 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		DE54D1852A6ED8ED00A783B1 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				DE0BED042A5E15C300E8C592 /* ContentView.swift */,
+				DE54D1852A6ED8ED00A783B1 /* LoadingView.swift */,
 				DE54D1832A6ECF5B00A783B1 /* WelcomeView.swift */,
 			);
 			path = Views;
@@ -162,6 +165,7 @@
 				DE0BED052A5E15C300E8C592 /* ContentView.swift in Sources */,
 				DE0BED032A5E15C300E8C592 /* WeatherAppApp.swift in Sources */,
 				DE0BED122A5E1C1A00E8C592 /* LocationManager.swift in Sources */,
+				DE54D1862A6ED8ED00A783B1 /* LoadingView.swift in Sources */,
 				DE54D1842A6ECF5B00A783B1 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
