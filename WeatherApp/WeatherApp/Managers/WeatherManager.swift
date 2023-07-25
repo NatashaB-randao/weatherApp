@@ -12,15 +12,19 @@ import CoreLocation
 
 class WeatherManager {
     // Solicitação HTTP para obter o clima atual dependendo das coordenadas que obtivemos do LocationManager
-    func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws {
+    func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> ResponseBody {
         // Substitua YOUR_API_KEY no link abaixo pelo seu próprio
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)}&lon=\(longitude)&appid=\("81fdea139f24c00f34a1716d1f4f1286")&units=metric") else { fatalError("Missing URL")}
         
         let urlRequest = URLRequest(url: url)
-        
+                
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
-        
-        guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error fetching weather data")}
+                
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
+                
+        let decodedData = try JSONDecoder().decode(ResponseBody.self, from: data)
+                
+        return decodedData
     }
 }
 
